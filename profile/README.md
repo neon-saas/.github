@@ -56,8 +56,8 @@ WhatsApp, que es donde ya está el cliente.
 | [`neon-web`](https://github.com/neon-saas/neon-web) | Panel del negocio: catálogo, stock y, en la etapa 2, conversaciones y pedidos | React · TypeScript · Vite |
 
 Dos lenguajes, y es una decisión: el back en Kotlin, el panel en TypeScript porque el
-presupuesto de carga en un móvil de gama baja no admite otra cosa. El contrato entre ambos no
-se comparte a mano — el cliente TypeScript se genera desde el OpenAPI de la API, en CI.
+presupuesto de carga en un móvil de gama baja no admite otra cosa. El contrato entre ambos es un
+OpenAPI versionado, del que se genera el cliente del panel en CI.
 
 El alcance es igual de explícito: el MVP es exactamente el conjunto de requerimientos `Must`
 de `PROYECTO.md`, y nada más.
