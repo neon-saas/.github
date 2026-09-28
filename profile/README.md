@@ -52,8 +52,12 @@ WhatsApp, que es donde ya está el cliente.
 | Repositorio | Descripción | Stack |
 |---|---|---|
 | [`docs`](https://github.com/neon-saas/docs) | Fuente de verdad del alcance: features, requerimientos, estimaciones, diseño de API y decisiones de arquitectura | — |
-| [`neon-api`](https://github.com/neon-saas/neon-api) | API y workers: reglas de negocio, procesado de imágenes, agente y canal de WhatsApp | Node 22 · TypeScript · NestJS · PostgreSQL 17 |
+| [`neon-api`](https://github.com/neon-saas/neon-api) | API y workers: reglas de negocio, procesado de imágenes, agente y canal de WhatsApp | Kotlin · Ktor · PostgreSQL 17 |
 | [`neon-web`](https://github.com/neon-saas/neon-web) | Panel del negocio: catálogo, stock y, en la etapa 2, conversaciones y pedidos | React · TypeScript · Vite |
 
-El stack está propuesto y aún no confirmado. El alcance, en cambio, sí: el MVP es exactamente
-el conjunto de requerimientos `Must` de `PROYECTO.md`, y nada más.
+Dos lenguajes, y es una decisión: el back en Kotlin, el panel en TypeScript porque el
+presupuesto de carga en un móvil de gama baja no admite otra cosa. El contrato entre ambos no
+se comparte a mano — el cliente TypeScript se genera desde el OpenAPI de la API, en CI.
+
+El alcance es igual de explícito: el MVP es exactamente el conjunto de requerimientos `Must`
+de `PROYECTO.md`, y nada más.
